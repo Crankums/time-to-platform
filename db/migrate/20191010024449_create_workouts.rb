@@ -1,12 +1,11 @@
 class CreateWorkouts < ActiveRecord::Migration[6.0]
   def change
     create_table :workouts do |t|
-      t.integer :length
-      t.datetime :start_time
-      t.datetime :end_time
-      t.string :type
       t.string :name
-      # what else?
+      t.integer :length
+      t.datetime :starts_at
+      t.datetime :ends_at
+      t.string :type
       t.timestamps
     end
   end

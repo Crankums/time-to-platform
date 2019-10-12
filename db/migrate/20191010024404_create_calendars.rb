@@ -6,8 +6,7 @@ class CreateCalendars < ActiveRecord::Migration[6.0]
       t.integer :appointment_id
       t.integer :workout_id
       t.integer :user_id
-      t.string :days
-      t.datetime :date
+
       # calendar attributes
       t.timestamps # necessary?
     end
