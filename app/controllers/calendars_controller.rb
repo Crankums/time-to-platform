@@ -5,18 +5,25 @@ class CalendarsController < ApplicationController
     end
 
     def new
-    end
-
-    def show
+        @calendar = Calendar.new
     end
 
     def create
+        @calendar = Calendar.create(calendar_params)
+    end
+
+    def show
+        @calendar = Calendar.find_by(id: params[:id])
     end
 
     def edit
+        @calendar = Calendar.find_by(id: params[:id])
     end
 
     def update
+        @calendar = Calendar.find_by(id: params[:id])
+        @calendar.update(calendar_params)
+        # is there a DRY update validation method I could create, given that I have about 4 edit pages?
     end
 
     private
