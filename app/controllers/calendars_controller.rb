@@ -1,5 +1,7 @@
 class CalendarsController < ApplicationController
     def index
+        @appoints = Appointments.all
+        @workouts= Workout.all
     end
 
     def new
