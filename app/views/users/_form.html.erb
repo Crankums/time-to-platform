@@ -1,0 +1,25 @@
+<%= form_with model: User.new do |f|%>
+
+<%= f.label :name %>
+<br>
+<%= f.text_field :name %>
+<br>
+<%= f.label :password %>
+<br>
+<%= f.text_field :password %>
+<br>
+<%= f.label :age%>
+<br>
+<%= f.text_field :age %>
+<br>
+<%= f.label :bio %>
+<br>
+<%= f.text_area :bio %>
+<br>
+<%= f.label :favorite_activity %>
+<br>
+<%= f.text_field :favorite_activity %>
+<br>
+<%= f.submit %>
+<% end %>
+
