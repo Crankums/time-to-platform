@@ -1,0 +1,9 @@
+<h2>Login with Email</h2>
+<%= form_for @user, user_path do |f| %>
+    <%= f.text_field :email %>
+    <br>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.submit %>
+    <% end %>
+<h2>or Log in with ???[Google, Facebook, Etc]</h2>
