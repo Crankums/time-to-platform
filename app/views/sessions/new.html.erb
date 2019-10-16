@@ -1,5 +1,5 @@
 <h2>Login with Email</h2>
-<%= form_for @user, user_path do |f| %>
+<%= form_with model: @user do |f| %>
     <%= f.text_field :email %>
     <br>
     <%= f.password_field :password %>
