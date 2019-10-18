@@ -4,5 +4,5 @@ class User < ApplicationRecord
     has_many :workouts, through: :calendar
     has_secure_password
 
-    # validations
+    
 end
