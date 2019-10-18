@@ -3,13 +3,17 @@
 <%= f.text_field :name %>
 <%= f.label :location %>
 <%= f.text_field :location %>
-<%= f.label :starts_at%>
-<%= f.text_field :starts_at %>
+<%# collection_check_boxes days of the week %>
+    <!-- or -->
+<%# date label %>
+<%# date field %>
+<%= f.label :starts_at%> <%# time %>
+<%= f.time_field :starts_at %> <%# time %>
 <%= f.label :ends_at %>
-<%= f.text_field :ends_at %>
+<%= f.time_field :ends_at %>
 <%= f.label :type %>
 <%= f.text_field :type %>
-<%# turn this into a selection?%>
-    <%# add conditionals? 'if work, need clothes?' etc %>
+<!--- turn this into a selection? -->
+<!--    add conditionals? 'if work, need clothes?' etc-->
 <%= f.submit %>
 <% end %>
