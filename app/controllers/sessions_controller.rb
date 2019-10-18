@@ -28,7 +28,6 @@ class SessionsController < ApplicationController
             :email, 
             :password
         )
-        end
     end
 
     
