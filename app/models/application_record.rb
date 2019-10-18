@@ -19,5 +19,9 @@ class ApplicationRecord < ActiveRecord::Base
     # else true
   end
 
+  
+  def overlap_ok?
+    # if overlap: true
+  end
 
 end
