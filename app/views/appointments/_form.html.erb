@@ -1,0 +1,15 @@
+<%= form_with model: appointment, local: true do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<%= f.label :starts_at%>
+<%= f.text_field :starts_at %>
+<%= f.label :ends_at %>
+<%= f.text_field :ends_at %>
+<%= f.label :type %>
+<%= f.text_field :type %>
+<%# turn this into a selection?%>
+    <%# add conditionals? 'if work, need clothes?' etc %>
+<%= f.submit %>
+<% end %>

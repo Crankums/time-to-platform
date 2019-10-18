@@ -1,0 +1,18 @@
+<%= form_with model: workout, local: true do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, placeholder: "Morning run, Spin Class, etc." %>
+
+<p>Workout Length</p>
+<label>Hours</label>
+<%= f.number_field :length %>
+<br>
+<label>Minutes</label>
+<%= f.number_field :length %>
+<br>
+<%= f.label :type %>
+<%= f.text_field :type %>
+<br>
+<%# checkboxes for days %>
+<br>
+<%= f.submit %>
+<% end %>
