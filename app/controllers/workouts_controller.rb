@@ -36,6 +36,13 @@ class WorkoutsController < ApplicationController
     private
     
     def workout_params
+        params.require(:workout).permit(
+            :name,
+            :type,
+            :duration,
+            :starts_at,
+            :ends_at,
+        )
     end
 
 end

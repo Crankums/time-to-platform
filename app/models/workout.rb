@@ -10,9 +10,9 @@ class Workout < ApplicationRecord
             # "Workout starts in fifteen. Time to get ready!"
         # when Time.now = workout.starts_at
             # "It's time to workout"
-        # when workout.length == 50%
+        # when workout.duration == 50%
             # "50% time left. It's time to head back"
-        # when workout.length == 100%
+        # when workout.duration == 100%
             # "All done" -- pop-up upload to Strava?
     end
 
