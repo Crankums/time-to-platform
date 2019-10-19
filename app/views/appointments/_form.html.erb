@@ -3,10 +3,8 @@
 <%= f.text_field :name %>
 <%= f.label :location %>
 <%= f.text_field :location %>
-<%# collection_check_boxes days of the week %>
-    <!-- or -->
-<%# date label %>
-<%# date field %>
+<%= f.collection_check_boxes(:days, days, :to_s, :to_s) %>
+ 
 <%= f.label :starts_at%> <%# time %>
 <%= f.time_field :starts_at %> <%# time %>
 <%= f.label :ends_at %>

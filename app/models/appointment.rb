@@ -5,6 +5,6 @@ class Appointment < ApplicationRecord
     validates :name, presence: true
     validates :starts_at, presence: true
     validates :ends_at, presence: true
-    validates :type, allow_blank: true
+    # validates :type, allow_blank: true
     
 end
