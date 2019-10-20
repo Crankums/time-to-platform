@@ -14,12 +14,13 @@ ActiveRecord::Schema.define(version: 2019_10_19_014836) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "start_time"
-    t.datetime "ends_time"
+    t.datetime "end_time"
     t.datetime "date"
     t.string "day"
     t.string "location"
     t.string "name"
-    t.string "type"
+    t.string "appt_type"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -63,7 +64,8 @@ ActiveRecord::Schema.define(version: 2019_10_19_014836) do
     t.integer "duration"
     t.datetime "starts_at"
     t.datetime "ends_at"
-    t.string "type"
+    t.string "workout_type"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

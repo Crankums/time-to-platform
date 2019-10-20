@@ -4,7 +4,6 @@ class CreateUsers < ActiveRecord::Migration[6.0]
 # 
       t.string :name
       t.string :password_digest
-      # some personal info. *optional*
       t.integer :age
       t.text :bio
       t.string :favorite_activity

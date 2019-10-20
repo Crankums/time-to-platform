@@ -3,8 +3,8 @@ class Appointment < ApplicationRecord
 
     validates :location, format: { with: /\A[, a-zA-Z]+\z/ }
     validates :name, presence: true
-    validates :starts_at, presence: true
-    validates :ends_at, presence: true
+    validates :start_time, presence: true
+    validates :end_time, presence: true
     # validates :type, allow_blank: true
     
 end

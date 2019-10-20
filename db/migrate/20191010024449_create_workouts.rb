@@ -5,7 +5,8 @@ class CreateWorkouts < ActiveRecord::Migration[6.0]
       t.integer :duration
       t.datetime :starts_at
       t.datetime :ends_at
-      t.string :type
+      t.string :workout_type
+      t.integer :user_id
       t.timestamps
     end
   end

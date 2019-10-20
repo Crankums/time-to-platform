@@ -1,9 +1,10 @@
 class Workout < ApplicationRecord
+    belongs_to :calendar
     has_one :user, through: :calendar
 
     validates :name, presence: true
     validates :duration, presence: true #time validator, applicationRecord can kick an invalid scheduling back out
-    validates :type, presence: true
+    validates :workout_type, presence: true
     
     def reminder_pop
         # when Time.now = workout.starts_at - 15.minutes

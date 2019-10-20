@@ -7,8 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create({name: "Grignak", age: 25, password: "tesTing123", bio: "I live for sorcery", favorite_activity: "running"})
-User.create({name: "User 2", age: 32, password: "$tink33", bio: "Spoocular!", favorite_activity: "Cycling"})
+User.create({name: "Grignak", age: 25, password: "tesTing123", password_confirmation: "tesTing123", bio: "I live for sorcery", favorite_activity: "running"})
+User.create({name: "User 2", age: 32, password: "$tink33", password_confirmation: "$tink33", bio: "Spooktacular!", favorite_activity: "Cycling"})
 
-Workout.create({name: "Morning Run", type: "Run", length: 15, starts_at: nil, ends_at: nil, user_id: 1})
-Appointment.create({user_id: 1, name: "Workin' 9-5", type: "Work", start_time: "9:00 AM", end_time: "5:00 PM", day: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], location: "233 S Wacker Ave", date: nil})
+Calendar.create({appointment_id: 1, user_id: 1, workout_id: 1})
+Workout.create({name: "Morning Run", workout_type: "run", duration: 15, starts_at: nil, ends_at: nil, user_id: 1})
+Appointment.create({user_id: 1, name: "Workin' 9-5", appt_type: "Work", start_time: "9:00 AM", end_time: "5:00 PM", day: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], location: "233 S Wacker Ave", date: nil})
