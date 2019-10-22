@@ -3,14 +3,14 @@
 <%= f.text_field :name, placeholder: "Morning run, Spin Class, etc." %>
 
 <p>Workout Length</p>
-<label>Hours</label>
-<%= f.number_field :length %>
+<label>Start Time</label>
+<%= f.datetime_local_field :start_time %>
 <br>
-<label>Minutes</label>
-<%= f.number_field :length %>
+<label>End Time</label>
+<%= f.datetime_local_field :end_time %>
 <br>
-<%= f.label :type %>
-<%= f.text_field :type %>
+<%= f.label :workout_type %>
+<%= f.text_field :workout_type %>
 <br>
 <%# checkboxes for days %>
 <br>
