@@ -1,0 +1,7 @@
+<ul>
+<%= @events.each do |event| %>
+    <%= if !event.past? %>
+    <li><%= event %></li>
+    <% end %>
+<% end %>
+</ul>

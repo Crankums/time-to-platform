@@ -4,7 +4,7 @@ class AppointmentsController < ApplicationController
     end
    
     def new
-        @appointment = Appointment.new
+        @appointment = Appointment.new(start_time: DateTime.now, end_time: DateTime.now+1.hour)
     end
 
     def create

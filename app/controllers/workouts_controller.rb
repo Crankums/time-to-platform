@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
     end
     
     def new
-        @workout = Workout.new
+        @workout = Workout.new(start_time: DateTime.now, end_time: DateTime.now+30.minute)
     end
 
     def create
