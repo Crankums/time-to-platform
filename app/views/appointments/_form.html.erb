@@ -6,12 +6,12 @@
 <%= f.label :days %> <br>
 <%= f.collection_check_boxes(:days, days, :to_s, :to_s) %> <br>
  
-<%= f.label :starts_at%> <%# time %> <br>
-<%= f.time_select :starts_at, {minute_step: 30, ampm: true} %><br>
-<%= f.label :ends_at %> <br>
-<%= f.time_select :ends_at, {minute_step: 30, ampm: true} %> <br>
-<%= f.label :type %> <br>
-<%= f.text_field :type %> <br>
+<%= f.label :start_time%> <%# time %> <br>
+<%= f.datetime_local_field :start_time, {minute_step: 30, ampm: true} %><br>
+<%= f.label :end_time %> <br>
+<%= f.datetime_local_field :end_time, {minute_step: 30, ampm: true} %> <br>
+<%= f.label :appt_type %> <br>
+<%= f.text_field :appt_type %> <br>
 <!--- turn this into a selection? -->
 <!--    add conditionals? 'if work, need clothes?' etc-->
 <%= f.submit %>

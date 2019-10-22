@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_19_014836) do
+ActiveRecord::Schema.define(version: 2019_10_22_002856) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "start_time"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(version: 2019_10_19_014836) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "events", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "workout_id"
+    t.integer "appointment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password_digest"
@@ -59,11 +67,18 @@ ActiveRecord::Schema.define(version: 2019_10_19_014836) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "workout_appointments", force: :cascade do |t|
+    t.integer "workout_id"
+    t.integer "appointment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "workouts", force: :cascade do |t|
     t.string "name"
     t.integer "duration"
-    t.datetime "starts_at"
-    t.datetime "ends_at"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string "workout_type"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false

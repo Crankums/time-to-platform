@@ -29,6 +29,7 @@ class CalendarsController < ApplicationController
     private
 
     def calendar_params
+        params.require(:calendar).permit(:user_id, :workout_id, :appointment_id)
     end
     
 end
