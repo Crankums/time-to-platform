@@ -4,6 +4,10 @@
 <br>
 <%= f.text_field :name, required: true %>
 <br>
+<%= f.label :email %>
+<br>
+<%= f.email_field :email, required: true %>
+<br>
 <%= f.label :password %>
 <br>
 <%= f.password_field :password, required: true %>
@@ -14,11 +18,11 @@
 <br>
 <%= f.label :age%>
 <br>
-<%= f.number_field :age %>
+<%= f.number_field :age, placeholder: "Optional" %>
 <br>
 <%= f.label :bio %>
 <br>
-<%= f.text_area :bio %>
+<%= f.text_area(:bio, placeholder: "What would you like your workout buddies to know?") %>
 <br>
 <%= f.label :favorite_activity %>
 <br>

@@ -5,11 +5,13 @@ class ApplicationRecord < ActiveRecord::Base
     Date::DAYNAMES
   end
   # args as hash for security?
-  def valid_schedule?(object_datetime)
-    #if date (appointment.start_time || workout.start_time) is prior to current date and time
-      # message "You can only schedule #{workout || appointment} after the current time"
-    # else true
+  def valid_schedule?(appt, wout)
+    if appt.start_time > wout.end_time || if appt.end_time < wout.start_time
+      puts "valid"
+    else
+      puts "time invalid"
   end
+
 
   
   def overlap_ok?
