@@ -1,9 +1,8 @@
 class User < ApplicationRecord
     has_one :calendar
-    has_many :appointments
-    has_many :workouts
-    has_many :appointments, through: :calendar
-    has_many :workouts, through: :calendar
+    has_many :appointments, through: :events
+    has_many :workouts, through: :events
+    has_many :events
     has_secure_password
 
     # validates :name, length: {minimum: 2}, presence: true, uniqueness: true
